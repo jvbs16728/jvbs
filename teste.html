@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Gerador de Currículos</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1>📝 Gerador de Currículos</h1>
+
+    <form action="gera_curriculo.php" method="POST">
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+            <label for="nome">Nome Completo:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="idade">Idade<label>
+            <input type="numero" id="idade" name="idade" required><br><br>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" name="telefone"><br><br>
+
+             
+             <label for="resumo"> Sobre mim:</label><br><br>
+<textarea id="campo_grande_multi_linha " name="profissional_detalhes"></textarea><br><br>
+
+
+
+  <label for="competencias">Competencias:</label><br><br>
+            <textarea id="campo_grande_multi_linha " name="profissional_detalhes"></textarea><br><br>
+
+
+
+
+
+        </fieldset>
+
+        <hr>
+
+        
+        <fieldset>
+            <legend><h2>Formação Acadêmica</h2></legend>
+            <div id="formacao-container">
+                <div class="formacao-item">
+                    <label>Curso:</label>
+                    <input type="text" name="formacao_curso[]" required>
+                    <label>Instituição:</label>
+                    <input type="text" name="formacao_instituicao[]" required>
+                    <label>Ano Conclusão:</label>
+                    <input type="text" name="formacao_ano[]" placeholder="AAAA" required>
+                    </div>
+
+                    <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Botão de Expansão</title>
+    <style>
+        /* 1. CSS: Oculta o conteúdo por padrão */
+        .conteudo-adicional {
+            display: none; /* ESSENCIAL: Faz com que a seção não seja exibida */
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-top: 10px;
+            background-color: #f9f9f9;
+        }
+
+        /* 2. CSS: Estiliza o botão (opcional) */
+        .botao-adicionar {
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Formação Acadêmica</h2>
+    
+    <button id="botao_formacao" class="botao-adicionar">
+        adicionar formação
+    </button>
+    
+    <div id="nova_formacao" class="conteudo-adicional">
+        <p>Preencha os dados da nova formação:</p>
+         <div class="formacao-item">
+                <label> curso: </label>
+                <input type="text" name="formacao_curso[]" required> 
+                <label>Instituição:</label>
+                <input type="text" name="formacao_instituicao[]" required>
+                <label>Ano Conclusão:</label>
+                <input type="text" name="formacao_ano[]" placeholder="AAAA" required>
+                </div>
+
+    </div>
+
+    <script>
+        // 4. JAVASCRIPT: A lógica para mostrar/ocultar
+        
+        // Pega o botão pelo ID
+        const botao = document.getElementById('botao_formacao');
+        
+        // Pega a seção de conteúdo adicional pelo ID
+        const conteudo = document.getElementById('nova_formacao');
+        
+        // Adiciona um "ouvinte de evento" (event listener) que reage ao clique
+        botao.addEventListener('click', function() {
+            // Verifica o estado atual do display (se está 'none' ou 'block')
+            if (conteudo.style.display === 'none' || conteudo.style.display === '') {
+                // Se estiver oculto, muda para 'block' para mostrar
+                conteudo.style.display = 'block';
+                // Opcional: Altera o texto do botão
+                botao.textContent = 'Ocultar formação'; 
+            } else {
+                // Se estiver visível, muda para 'none' para ocultar
+                conteudo.style.display = 'none';
+                // Opcional: Altera o texto do botão
+                botao.textContent = 'adicionar formação';
+            }
+        });
+
+        /*
+         * NOTA: É uma boa prática inicializar o JavaScript após o clique
+         * para garantir que o 'display' inicial seja 'none' se o CSS falhar.
+         * Embora não seja estritamente necessário neste exemplo simples.
+        */
+        
+    </script>
+
+</body>
+</html>
+         
+            </script>
+
+        </fieldset>
+
+        <hr>
+
+
+          <form action="gera_curriculo.php" method="POST">
+        <fieldset>
+            <legend><h2>Esperiencia</h2></legend>
+            <label for="nome">Nome da Empresa:</label>
+            <input type="text" id="nome" name="nome" required><br><br>
+            
+            <label for="entrada">Data de inicio<label>
+            <input type="numero" id="inicio" name="inicio" required> <label for="saida">Data de saisa:</label>
+            <input type="tel" id="data de saida" name="saida"><br><br>
+             
+             <label for="resumo"> Area trabalhada na enpresa:</label><br><br>
+           <textarea id="campo_grande_multi_linha " name="profissional_detalhes"></textarea>
+
+
+
+
+
+         
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+        </fieldset>
+
+        <hr>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       
+    </form>
+
+      <footer>
+        <button onclick="window.print()">Imprimir / Salvar como PDF</button>
+    </footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 40px auto;
+    max-width: 800px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+}
+
+h2 {
+    color: #565;
+    margin-top: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+    padding-left: 10px;
+    border-left: 3px solid #007bff;
+}
+
+/* Estilo para impressão */
+@media print {
+    button {
+        display: none; /* Esconde o botão de impressão no currículo final */
+    }
+}
+
+
+
+
+
+
+
